@@ -1,0 +1,6 @@
+# /opt/pwnagotchi/system_monitor/requirements.txt
+pillow
+psutil
+numpy
+RPi.GPIO
+spidev

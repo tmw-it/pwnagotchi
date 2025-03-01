@@ -10,12 +10,12 @@
 import spidev
 
 # Pin definition
-RST_PIN = 27
-DC_PIN = 25
-BL_PIN = 24
+RST_PIN = 13  # RST0 for center display
+DC_PIN = 15   # DC0 for center display
+BL_PIN = 35   # BL0 for center display
 
 Device_SPI = 1
 Device_I2C = 0
 
 Device = Device_SPI
-spi = spidev.SpiDev(0, 0)
+spi = spidev.SpiDev(1, 0)
