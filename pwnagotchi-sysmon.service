@@ -1,0 +1,17 @@
+[Unit]
+Description=Pwnagotchi System Monitor for Side Displays
+After=network.target pwnagotchi.service
+Wants=pwnagotchi.service
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/opt/pwnagotchi/sysmon
+ExecStart=/usr/bin/python3 /opt/pwnagotchi/sysmon/sysmon.py
+Restart=always
+RestartSec=5
+StandardOutput=append:/var/log/pwnagotchi-sysmon.log
+StandardError=append:/var/log/pwnagotchi-sysmon.log
+
+[Install]
+WantedBy=multi-user.target 
